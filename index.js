@@ -52,7 +52,7 @@ var query = module.exports = function(text, values, cb) {
     };
     var onSuccess = function(res) {
       done();
-      cb(null, res.rows, res);
+      cb(null, res);
     };
     var qry = client.query(q, ok(onError, onSuccess));
     query.before(qry, client);
